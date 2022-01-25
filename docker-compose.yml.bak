@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+
+  manta_nginx:
+    image: nginx:1.19.0
+    restart: on-failure
+    volumes:
+      - './:/var/www/:cached'
+      - './.docker/nginx/nginx.conf:/etc/nginx/nginx.conf'
+      - './.docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf'
+    ports:
+      - "0.0.0.0:8888:80"
+    links:
+      - manta_php
+    depends_on:
+      - manta_php
+  manta_php:
+    build: ./.docker/php
+    volumes:
+      - './:/var/www/:cached'
