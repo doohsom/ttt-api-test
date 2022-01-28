@@ -228,8 +228,4 @@ class GameProgress {
         }
         return array_values(array_diff($this->tiles,$data));
     }
-
-
-
-
 }
