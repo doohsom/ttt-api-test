@@ -2,9 +2,7 @@
 
 use app\controller\GameProgress;
 
-include 'vendor/autoload.php';
-
-include_once 'app\controller\GameProgress.php';
+include_once __DIR__ . '/app/controller/GameProgress.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");

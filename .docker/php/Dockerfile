@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get install -y git zlib1g-dev libzip-dev unzip libmemcached-dev libpng-dev libicu-dev g++ curl \
     libonig-dev \
     libjpeg62-turbo-dev libfreetype6-dev
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN docker-php-ext-enable mysqli
 RUN docker-php-ext-install zip
 RUN docker-php-ext-install opcache

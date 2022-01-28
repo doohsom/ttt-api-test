@@ -2,14 +2,14 @@
 
 namespace app\controller;
 
+
+include_once 'app/Model.php';
+include_once 'app/helpers/helpers.php';
+include_once 'app/traits/ResponseTrait.php';
+
 use app\Model;
 use app\traits\ResponseTrait;
 
-require 'vendor\autoload.php';
-
-include_once 'app\Model.php';
-include_once 'app\helpers\helpers.php';
-include_once 'app\traits\ResponseTrait.php';
 
 class GameController {
 
@@ -25,7 +25,12 @@ class GameController {
         $this->model = new Model();
     }
 
-    public function storeUser($data)
+    /**
+     * Trims and Validates input
+     * Store Usernames
+     *
+     */
+    public function storeUser($data) : string
     {
         $data = validateInput($data);
         $requiredField = requiredFields($data, $this->required);
@@ -41,7 +46,13 @@ class GameController {
         }
     }
 
-    public function getAll($status)
+    /**
+     * Get all games if they are completed or active by status
+     * status = ACTIVE OR COMPLETED
+     *
+     */
+
+    public function getAll(string $status) : string
     {
         if(!in_array($status, ['COMPLETED', 'ACTIVE'])){
             $this->validation('Invalid status string');
@@ -57,7 +68,12 @@ class GameController {
         }
     }
 
-    public function read($id)
+    /**
+     * Get the content of a game by id
+     *
+     */
+
+    public function read(int $id) : string
     {
         $where = 'id';
         $whereValue = $id;

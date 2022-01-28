@@ -7,10 +7,10 @@ use PDO;
 use PDOException;
 
 class Database {
-    private $host = "localhost";
-    private $database_name = "tic-tac-toe";
-    private $username = "root";
-    private $password = "";
+    private $host = "mysql";
+    private $database_name = "ttt-api-user";
+    private $username = "treggy";
+    private $password = "Moshood";
 
     public $conn;
 

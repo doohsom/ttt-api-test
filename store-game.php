@@ -2,9 +2,8 @@
 
 use app\controller\GameController;
 
-include 'vendor/autoload.php';
 
-include_once 'app\controller\GameController.php';
+include_once __DIR__ . '/app/controller/GameController.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -20,7 +19,7 @@ $post = [
     'user_o' => $_POST['user_o']
 ];
 $data = isset($_POST['user_x']) ? $post: (array)json_decode((file_get_contents("php://input"))) ;
-$data['status'] = 'ONGOING';
+$data['status'] = 'ACTIVE';
 $data['created_at'] = date('Y-m-d H:i:s');
 $data['updated_at'] = date('Y-m-d H:i:s');
 

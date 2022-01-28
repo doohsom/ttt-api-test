@@ -1,27 +1,27 @@
-POST http://localhost/ttt-api-test/store-game.php
+POST http://localhost:8888/api/store-game
 Content-Type: application/x-www-form-urlencoded
 
 user_x=mosh&user_o=jernej
 
 ### set username
 
-GET http://localhost/ttt-api-test/empty-positions.php
+GET http://localhost:8888/api/empty-positions
 Accept: application/json
 
 ###
 
 
-POST http://localhost/ttt-api-test/store-location.php
+POST http://localhost:8888/api/store-location
 game_id=1&positions=11&user_id=mosh
 
 ### store location
 
-GET http://localhost/ttt-api-test/list-games.php/?status=COMPLETED
+GET http://localhost:8888/api/list-games?status=COMPLETED
 status=ACTIVE/COMPLETED
 
 ### get list of all names by status
 
-GET http://localhost/ttt-api-test/read-game.php/?game_id=1
+GET http://localhost:8888/api/read-game?game_id=1
 game_id=1
 
 ### read game by id

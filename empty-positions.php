@@ -1,8 +1,7 @@
 <?php
-//include 'vendor/autoload.php';
 use app\controller\GameProgress;
 
-include_once 'app\controller\GameProgress.php';
+include_once __DIR__ . '/app/controller/GameProgress.php';
 
 
 $items = new GameProgress();

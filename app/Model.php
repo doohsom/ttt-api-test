@@ -1,9 +1,9 @@
 <?php
 namespace app;
 
-require 'vendor\autoload.php';
+//require 'vendor\autoload.php';
 
-include 'app\Database.php';
+include 'app/Database.php';
 
 use mysql_xdevapi\Table;
 use PDO;

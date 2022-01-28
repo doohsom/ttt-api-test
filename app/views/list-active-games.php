@@ -1,7 +1,7 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" >
     </head>
     <body>
     <!-- As a heading -->
@@ -14,10 +14,10 @@
 
 
 
-        <form action="list-games.php" method="get">
+        <form action="/api/list-games" method="get">
             <div class="mb-3">
                 <label class="form-label" for="userX">Status</label>
-                <input type="text" class="form-control" name="status" placeholder="Status" required>
+                <input type="text" class="form-control" name="status" placeholder="Statusx" required>
             </div>
 
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
@@ -26,7 +26,8 @@
 
     </div>
     </div>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
 </html>

@@ -2,9 +2,7 @@
 
 use app\controller\GameController;
 
-include 'vendor/autoload.php';
-
-include_once 'app\controller\GameController.php';
+include_once __DIR__ . '/app/controller/GameController.php';
 
 //print_r($res);
 $items = new GameController();

@@ -1,7 +1,7 @@
 <html>
     <head>
         <title></title>
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" >
     </head>
     <body>
     <!-- As a heading -->
@@ -14,7 +14,7 @@
 
 
 
-        <form action="store-game.php" method="post">
+        <form action="/api" method="post">
             <div class="mb-3">
                 <label class="form-label" for="userX">User X</label>
                 <input type="text" class="form-control" name="user_x" placeholder="User X" required>
@@ -28,7 +28,7 @@
 
     </div>
     </div>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>
