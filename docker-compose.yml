@@ -39,5 +39,5 @@ services:
       MYSQL_USER: treggy
       MYSQL_PASSWORD: Moshood
     ports:
-      - "9906:3306"
+      - "9906:3310"
 
